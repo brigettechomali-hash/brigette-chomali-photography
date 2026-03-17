@@ -7,7 +7,7 @@ exports.handler = async () => {
   const imageExts = ['.jpg', '.jpeg', '.JPG', '.JPEG', '.png', '.PNG', '.webp', '.WEBP'];
 
   categories.forEach(cat => {
-    const dir = path.join(__dirname, '../../images/portfolio', cat);
+    const dir = path.join(__dirname, '../../../images/portfolio', cat);
     try {
       const files = fs.readdirSync(dir).filter(f => {
         const ext = path.extname(f);
@@ -25,3 +25,8 @@ exports.handler = async () => {
     body: JSON.stringify(result),
   };
 };
+```
+
+The only change is on this line — I added one extra `../` to go up one more folder level:
+```
+path.join(__dirname, '../../../images/portfolio', cat);
