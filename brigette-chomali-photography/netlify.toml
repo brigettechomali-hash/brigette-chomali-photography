@@ -1,5 +1,7 @@
 [build]
-  functions = "netlify/functions"
+  base = "brigette-chomali-photography"
+  publish = "brigette-chomali-photography"
+  functions = "brigette-chomali-photography/netlify/functions"
 
 [[headers]]
   for = "/*"
