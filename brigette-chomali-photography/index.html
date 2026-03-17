@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brigette Chomali Photography | Newborn & Portrait Studio, New York</title>
+  <meta name="description" content="Brigette Chomali Photography — a warm, unhurried portrait studio in New York specializing in newborn, toddler, maternity and family photography." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <header class="nav" id="top">
+    <a href="#top" class="nav-logo">
+      <svg width="200" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+        <rect class="cam-body" x="128" y="6" width="44" height="32" rx="4"/>
+        <rect class="cam-body" x="142" y="0" width="16" height="8" rx="2"/>
+        <circle class="cam-ring" cx="150" cy="22" r="10"/>
+        <circle class="cam-ring" cx="150" cy="22" r="5"/>
+        <rect class="cam-body" x="163" y="9" width="5" height="4" rx="1"/>
+        <circle cx="150" cy="22" r="2" fill="#2a2420"/>
+        <text class="logo-name" text-anchor="middle" x="150" y="58">BRIGETTE CHOMALI</text>
+        <line x1="50" y1="67" x2="250" y2="67" stroke="#c9b8a8" stroke-width="0.75"/>
+        <text class="logo-photo" text-anchor="middle" x="150" y="92">Photography</text>
+      </svg>
+    </a>
+    <nav class="nav-links">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#packages">Packages</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#portfolio" class="mobile-link">Portfolio</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#packages" class="mobile-link">Packages</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- ============================================================
+       HERO
+       Replace hero-bg with your best photo by editing the CSS:
+       .hero { background-image: url('images/hero.jpg'); }
+  ============================================================ -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Portrait Studio · New York</p>
+      <h1 class="hero-title">Every tiny<br><em>moment</em>, preserved.</h1>
+      <a href="#contact" class="hero-cta">Book a session →</a>
+    </div>
+  </section>
+
+  <!-- Specialty strip -->
+  <div class="strip">
+    <span>Newborns</span>
+    <span class="dot">·</span>
+    <span>Toddlers</span>
+    <span class="dot">·</span>
+    <span>Maternity</span>
+    <span class="dot">·</span>
+    <span>Family</span>
+  </div>
+
+  <!-- ============================================================
+       ABOUT / BIO
+       Replace the placeholder image with Brigette's portrait:
+       <img src="images/brigette-portrait.jpg" alt="Brigette Chomali" />
+  ============================================================ -->
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="images/brigette-portrait.jpg" alt="Brigette Chomali, photographer" />
+    </div>
+    <div class="about-text">
+      <p class="section-label">Meet your photographer</p>
+      <h2>Brigette <em>Chomali</em></h2>
+      <div class="rule"></div>
+      <div class="bio-body">
+        <p>There is a fleeting magic to the earliest days of life — the curl of a newborn's fingers, the drowsy weight of a sleeping baby, the wide-eyed wonder of a toddler discovering the world for the very first time. These moments pass in the blink of an eye, and Brigette Chomali has dedicated her career to making sure they never have to.</p>
+        <blockquote class="pull-quote">"I don't just take photographs — I preserve the things that matter most, so families can hold onto them forever."</blockquote>
+        <p>Based in New York, Brigette is a portrait photographer specializing in newborn and toddler photography. With a gentle, unhurried approach and a deep love for her craft, she creates a studio experience that feels less like a photoshoot and more like a warm afternoon with a trusted friend. Her sessions are thoughtfully paced around little ones — because she knows that the most genuine, breathtaking images happen when everyone feels completely at ease.</p>
+        <p>Brigette's journey into photography began with a simple but powerful realization: that a single image has the ability to stop time. What started as a personal passion quickly grew into a calling. Today, she brings that same heartfelt intention to every family who walks through her studio doors — infusing each session with patience, artistry, and an unwavering commitment to capturing authentic connection.</p>
+        <p>When she's not behind the lens, Brigette is a mother herself — and it is that perspective, more than anything else, that shapes the tenderness and care she brings to every photograph she creates.</p>
+      </div>
+      <div class="signature">Brigette Chomali</div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PORTFOLIO GALLERY
+       HOW TO ADD PHOTOS:
+       1. Save your photos into the correct subfolder:
+            images/portfolio/newborns/
+            images/portfolio/toddlers/
+            images/portfolio/maternity/
+            images/portfolio/family/
+       2. Copy one of the <figure> blocks below and update the
+          src and alt text. That's it!
+  ============================================================ -->
+  <section class="gallery-section" id="portfolio">
+    <p class="section-label">Gallery</p>
+    <h2>A glimpse of the work</h2>
+
+    <div class="gallery-tabs">
+      <button class="tab active" data-filter="all">All</button>
+      <button class="tab" data-filter="newborns">Newborns</button>
+      <button class="tab" data-filter="toddlers">Toddlers</button>
+      <button class="tab" data-filter="maternity">Maternity</button>
+      <button class="tab" data-filter="family">Family</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+
+      <!-- ======================================================
+           ADD YOUR PHOTOS HERE
+           Copy a <figure> block, change the src, alt, and data-category.
+           Categories: newborns | toddlers | maternity | family
+           Example:
+           <figure class="gallery-item" data-category="newborns">
+             <img src="images/portfolio/newborns/newborn-001.jpg" alt="Newborn session" loading="lazy" />
+           </figure>
+      ====================================================== -->
+
+      <!-- Photos load automatically from the images/portfolio subfolders.
+           Just drop JPGs into the correct folder and redeploy to Netlify. -->
+
+    </div>
+  </section>
+
+  <!-- Lightbox overlay -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <button class="lightbox-prev" id="lightboxPrev">‹</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+    <button class="lightbox-next" id="lightboxNext">›</button>
+  </div>
+
+  <!-- ============================================================
+       PACKAGES
+  ============================================================ -->
+  <section class="packages" id="packages">
+    <p class="section-label">Investment</p>
+    <h2>Session packages</h2>
+    <div class="pkg-grid">
+      <div class="pkg-card">
+        <div class="pkg-name">Mini</div>
+        <div class="pkg-price">$250</div>
+        <ul class="pkg-list">
+          <li>30-minute session</li>
+          <li>10 edited digital images</li>
+          <li>Private online gallery</li>
+          <li>Full print release</li>
+        </ul>
+        <a href="#contact" class="pkg-btn">Book now</a>
+      </div>
+      <div class="pkg-card featured">
+        <div class="pkg-badge">Most popular</div>
+        <div class="pkg-name">Classic</div>
+        <div class="pkg-price">$450</div>
+        <ul class="pkg-list">
+          <li>60-minute session</li>
+          <li>25 edited digital images</li>
+          <li>Private online gallery</li>
+          <li>Full print release</li>
+        </ul>
+        <a href="#contact" class="pkg-btn pkg-btn-light">Book now</a>
+      </div>
+      <div class="pkg-card">
+        <div class="pkg-name">Heirloom</div>
+        <div class="pkg-price">$750</div>
+        <ul class="pkg-list">
+          <li>90-minute session</li>
+          <li>40+ edited digital images</li>
+          <li>Fine art print included</li>
+          <li>Custom album design</li>
+        </ul>
+        <a href="#contact" class="pkg-btn">Book now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS
+  ============================================================ -->
+  <section class="testimonials">
+    <p class="section-label" style="color:#7a6e65;">Kind words</p>
+    <h2 style="color:#e8ddd4;">What families are saying</h2>
+
+    <div class="testi-featured">
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <blockquote>"Brigette made us feel so comfortable from the moment we walked in. Our newborn photos are absolutely breathtaking — we will treasure them for the rest of our lives."</blockquote>
+      <cite>Rachel <span>· Newborn session</span></cite>
+    </div>
+
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <blockquote>"I was so nervous about how my toddler would behave, but Brigette has this incredible way of connecting with little ones. She was patient, playful, and the photos she captured were pure magic."</blockquote>
+        <cite>Dolly <span>· Toddler session</span></cite>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <blockquote>"From booking to receiving our gallery, every step was seamless and professional. Brigette has a true gift for capturing emotion — our maternity photos left me in tears of joy."</blockquote>
+        <cite>Sarah <span>· Maternity session</span></cite>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <blockquote>"We've now booked Brigette three times — newborn, six-month milestone, and family session. Each time the photos get more stunning. She just gets better and better."</blockquote>
+        <cite>Rosie <span>· Returning client</span></cite>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <blockquote>"Brigette's studio is warm, beautiful, and spotlessly clean — perfect for a newborn. She took her time, never rushed, and the final images were beyond anything I could have imagined."</blockquote>
+        <cite>Rena <span>· Newborn session</span></cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT FORM
+       The form uses Netlify's free built-in form handling.
+       Submissions will appear in your Netlify dashboard automatically.
+  ============================================================ -->
+  <section class="contact" id="contact">
+    <div class="contact-left">
+      <p class="section-label">Book a session</p>
+      <h2>Let's capture<br>your story</h2>
+      <p class="contact-intro">Fill in the form and Brigette will be in touch within 48 hours to discuss your session. Or reach out directly:</p>
+
+      <div class="contact-details">
+        <a href="tel:9178415275" class="contact-detail">
+          <span class="contact-detail-label">Phone</span>
+          <span class="contact-detail-value">(917) 841-5275</span>
+        </a>
+        <a href="mailto:brigettechomali@gmail.com" class="contact-detail">
+          <span class="contact-detail-label">Email</span>
+          <span class="contact-detail-value">brigettechomali@gmail.com</span>
+        </a>
+        <a href="https://www.instagram.com/brigette_chomali_photography/" target="_blank" rel="noopener" class="contact-detail">
+          <span class="contact-detail-label">Instagram</span>
+          <span class="contact-detail-value">@brigette_chomali_photography</span>
+        </a>
+      </div>
+
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+        <input type="hidden" name="form-name" value="contact" />
+        <p style="display:none"><input name="bot-field" /></p>
+
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required />
+        </div>
+        <div class="field">
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="+1 (000) 000-0000" />
+        </div>
+        <div class="field">
+          <label for="session">Session type</label>
+          <select id="session" name="session" required>
+            <option value="" disabled selected>Select a session type</option>
+            <option value="newborn">Newborn</option>
+            <option value="toddler">Toddler</option>
+            <option value="maternity">Maternity</option>
+            <option value="family">Family</option>
+            <option value="other">Other / Not sure</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell me a little about your session — due date, baby's age, any ideas you have…"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send inquiry →</button>
+      </form>
+    </div>
+    <div class="contact-right">
+      <img src="images/studio.jpg" alt="Brigette Chomali Photography Studio" />
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <a href="#top" class="footer-logo">
+      <svg width="140" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+        <rect class="cam-body-light" x="128" y="6" width="44" height="32" rx="4"/>
+        <rect class="cam-body-light" x="142" y="0" width="16" height="8" rx="2"/>
+        <circle class="cam-ring-light" cx="150" cy="22" r="10"/>
+        <circle class="cam-ring-light" cx="150" cy="22" r="5"/>
+        <rect class="cam-body-light" x="163" y="9" width="5" height="4" rx="1"/>
+        <circle cx="150" cy="22" r="2" fill="#c9b8a8"/>
+        <text class="logo-name-light" text-anchor="middle" x="150" y="58">BRIGETTE CHOMALI</text>
+        <line x1="50" y1="67" x2="250" y2="67" stroke="#5a4e45" stroke-width="0.75"/>
+        <text class="logo-photo-light" text-anchor="middle" x="150" y="92">Photography</text>
+      </svg>
+    </a>
+    <div class="footer-right">
+      <div class="footer-links">
+        <a href="https://www.instagram.com/brigette_chomali_photography/" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:brigettechomali@gmail.com">Email</a>
+        <a href="tel:9178415275">(917) 841-5275</a>
+      </div>
+      <p class="footer-copy">© 2025 Brigette Chomali Photography. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
