@@ -1,0 +1,8 @@
+Drop your maternity photos into this folder.
+
+Example filenames:
+  maternity-001.jpg
+  maternity-002.jpg
+
+Then open index.html, find the <!-- ADD YOUR PHOTOS HERE --> section,
+and copy/paste a <figure> block for each photo.

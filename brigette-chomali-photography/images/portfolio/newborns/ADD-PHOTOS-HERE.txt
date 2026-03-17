@@ -1,0 +1,8 @@
+Drop your newborns photos into this folder.
+
+Example filenames:
+  newborns-001.jpg
+  newborns-002.jpg
+
+Then open index.html, find the <!-- ADD YOUR PHOTOS HERE --> section,
+and copy/paste a <figure> block for each photo.

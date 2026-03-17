@@ -1,0 +1,7 @@
+Save these two photos into this images/ folder:
+
+  brigette-portrait.jpg  ← your photo for the About section
+  studio.jpg             ← a studio photo for the Contact section
+
+Then open index.html and un-comment the <img> tags in the
+About and Contact sections (look for the <!-- ADD ... --> comments).

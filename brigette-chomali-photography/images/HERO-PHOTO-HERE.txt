@@ -1,0 +1,7 @@
+Save your hero (main background) photo as:
+  hero.jpg
+and drop it into this images/ folder.
+
+Then open style.css, find the line:
+  /* background-image: url('images/hero.jpg'); */
+and remove the /* and */ to activate it.
