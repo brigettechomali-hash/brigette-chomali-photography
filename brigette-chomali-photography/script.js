@@ -11,51 +11,59 @@ document.querySelectorAll('.mobile-link').forEach(link => {
   link.addEventListener('click', () => mobileMenu.classList.remove('open'));
 });
 
-/* ---------- Auto-load gallery images ----------
-   Calls /.netlify/functions/get-images which scans the
-   portfolio folders on the server automatically.
-   Just drop JPGs into images/portfolio/newborns etc. — done!
------------------------------------------------------------- */
+/* ---------- Gallery images ---------- */
+const PHOTOS = {
+  newborns: [
+    "images/portfolio/newborns/4K9A8281.JPG",
+    "images/portfolio/newborns/4K9A8367.JPG"
+  ],
+  toddlers: [
+    "images/portfolio/toddlers/4K9A0028.jpg",
+    "images/portfolio/toddlers/IMG_0047.jpg",
+    "images/portfolio/toddlers/IMG_7010.jpg",
+    "images/portfolio/toddlers/IMG_7011.jpg",
+    "images/portfolio/toddlers/IMG_8706.jpg",
+    "images/portfolio/toddlers/IMG_8740.jpg",
+    "images/portfolio/toddlers/IMG_8863.jpg"
+  ],
+  maternity: [
+    "images/portfolio/maternity/4K9A8951.JPG",
+    "images/portfolio/maternity/IMG_2702.JPG"
+  ],
+  family: [
+    "images/portfolio/family/IMG_6404.jpg",
+    "images/portfolio/family/IMG_7874.jpg",
+    "images/portfolio/family/IMG_9291.jpg"
+  ]
+};
+
 const grid = document.getElementById('galleryGrid');
 
-async function loadGallery() {
-  try {
-    const res  = await fetch('/.netlify/functions/get-images');
-    const data = await res.json();
+function loadGallery() {
+  grid.innerHTML = '';
+  let total = 0;
 
-    grid.innerHTML = '';
-
-    const categories = ['newborns', 'toddlers', 'maternity', 'family'];
-    let total = 0;
-
-    categories.forEach(cat => {
-      (data[cat] || []).forEach(src => {
-        const fig = document.createElement('figure');
-        fig.className = 'gallery-item';
-        fig.dataset.category = cat;
-
-        const img = document.createElement('img');
-        img.src = src;
-        img.alt = cat.charAt(0).toUpperCase() + cat.slice(1) + ' portrait session';
-        img.loading = 'lazy';
-
-        fig.appendChild(img);
-        grid.appendChild(fig);
-        total++;
-      });
+  ['newborns', 'toddlers', 'maternity', 'family'].forEach(cat => {
+    (PHOTOS[cat] || []).forEach(src => {
+      const fig = document.createElement('figure');
+      fig.className = 'gallery-item';
+      fig.dataset.category = cat;
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = cat.charAt(0).toUpperCase() + cat.slice(1) + ' portrait session';
+      img.loading = 'lazy';
+      fig.appendChild(img);
+      grid.appendChild(fig);
+      total++;
     });
+  });
 
-    if (total === 0) {
-      grid.innerHTML = '<div class="gallery-empty"><p>Photos coming soon!</p></div>';
-    }
-
-    initLightbox();
-    const activeTab = document.querySelector('.tab.active');
-    if (activeTab) applyFilter(activeTab.dataset.filter);
-
-  } catch (err) {
-    grid.innerHTML = '<div class="gallery-empty"><p>Upload to Netlify to see the gallery.</p></div>';
+  if (total === 0) {
+    grid.innerHTML = '<div class="gallery-empty"><p>Photos coming soon!</p></div>';
   }
+
+  initLightbox();
+  applyFilter('all');
 }
 
 loadGallery();
